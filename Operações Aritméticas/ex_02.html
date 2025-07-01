@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 02</title>
+</head>
+
+<body>
+    <!--
+        02. Crie um programa no qual:
+
+        a) O usuário informe sua nota na escola
+        b) Deve haver num botão "opinião da avó"
+        c) Deve haver num botão "opinião da mãe"
+        d) Ao clicar num botão "opinião da avó", abaixo dos botões, exibir 
+        "Muito bem, que neto inteligente, porque tirou X".
+        e) Ao clicar num botão "opinião da mãe", abaixo dos botões, exibir 
+        "Não fez mais que tua obrigação com essa nota X", onde X é a nota que ele digitou.
+    -->
+    <p>Insira a sua nota:</p>
+    <br>
+    <input type="number" id="inp_nota">
+    <br>
+    <br>
+    <div id="texto"></div>
+    <br>
+    <button onclick="opiniaodaAvo()">opinião da avó</button>
+    <button onclick="opiniaoDaMae()">opinião da mãe</button>
+
+</body>
+<script>
+    var nota;
+
+    function opiniaodaAvo(){
+        nota = Number(inp_nota.value);
+        texto.innerHTML = (`Muito bem, que neto inteligente, porque tirou ${nota}`)
+    }
+
+    function opiniaoDaMae(){
+        nota = Number(inp_nota.value);
+        texto.innerHTML = (`Não fez mais que tua obrigação com essa nota ${nota}`)
+    }
+</script>
+</html>
