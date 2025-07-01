@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 04</title>
+</head>
+<body>
+    <!--
+    04. Crie uma página que solicite ao usuário que digite seu peso e altura.
+
+    a) Deve haver um botão com o texto "Fale comigo".
+    b) Ao clicar no botão, deve aparecer uma frase como esta numa caixinha de alerta:
+    Você pesa X e tem Y de altura" - Onde X e Y são os valores que o usuário digitou
+    -->
+    <p>Insira o seu peso: </p>
+    <input type="number" id="inp_peso">
+    <br>
+    <p>Insira a sua altura: </p>
+    <input type="number" id="inp_altura">
+    <br>
+    <button onclick="calcular()">fale comigo</button>
+    <div id="resultado"></div>
+</body>
+    <script>
+        function calcular(){
+            peso = Number(inp_peso.value);
+            altura = Number(inp_altura.value);
+            
+            resultado.innerHTML = (`Você pesa ${peso} e tem ${altura} de altura`)
+        }
+    </script>
+</html>
