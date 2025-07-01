@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 11</title>
+</head>
+<body>
+    <!--
+    11. Crie um programa que:
+
+    a) Solicite 2 números ao usuário
+    b) tenha um botão para cada operação aritmética. Ao clicar em algum deles, exibir na página uma dessas frases:
+
+        A soma entre X e Y é Z
+        A diferença entre X e Y é Z
+        O produto entre X e Y é Z
+        A razão entre X e Y é Z    
+    -->
+    <p>Insira o primeiro número: </p>
+    <input type="number" id="inp_primeiroNumero">
+    <br>
+    <p>Insira o segundo número: </p>
+    <input type="number" id="inp_segundoNumero">
+    <br>
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtracao()">Subtrair</button>
+    <button onclick="multiplicacao()">Multiplicar</button>
+    <button onclick="divisao()">Dividir</button>
+    <br>
+    <div id="resultado"></div>
+</body>
+<script>
+    var primeiroNum;
+    var segundoNum;
+    
+    function somar(){
+        primeiroNum = Number(inp_primeiroNumero.value);
+        segundoNum = Number(inp_segundoNumero.value);
+        soma = primeiroNum + segundoNum;
+        resultado.innerHTML = (`A soma entre ${primeiroNum} e ${segundoNum} é ${soma}`)
+    }
+
+    function subtracao(){
+        primeiroNum = Number(inp_primeiroNumero.value);
+        segundoNum = Number(inp_segundoNumero.value);
+        diferenca = primeiroNum - segundoNum;
+        resultado.innerHTML = (`A diferença entre ${primeiroNum} e ${segundoNum} é ${diferenca}`)
+    }
+
+    function multiplicacao(){
+        primeiroNum = Number(inp_primeiroNumero.value);
+        segundoNum = Number(inp_segundoNumero.value);
+        produto = primeiroNum * segundoNum;
+        resultado.innerHTML = (`o produto entre ${primeiroNum} e ${segundoNum} é ${produto}`)
+    }
+
+    function divisao(){
+        primeiroNum = Number(inp_primeiroNumero.value);
+        segundoNum = Number(inp_segundoNumero.value);
+        razao = primeiroNum / segundoNum;
+        resultado.innerHTML = (`A razão entre ${primeiroNum} e ${segundoNum} é ${razao}`)
+    }
+</script>
+</html>
