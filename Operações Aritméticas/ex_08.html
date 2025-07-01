@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 08</title>
+</head>
+<body>
+    <!--
+    08. Crie um programa que ajude um grupo de amigos a saber quanto uma pizza vai custar para cada amigo.
+
+    a) Solicite o valor da pizza e a quantidade de amigos que vão dividir o valor.
+    b) Ao clicar num botão "#lovePizza", exiba um alerta com a frase
+
+    "Cada um dos X amigos vai pagar R$Y"
+    Onde X é a quantidade de amigos e Y é o resultado do cálculo que seu programa fará
+    -->
+    <p>Insira a quantidade de amigos que vão dividir o valor: </p>
+    <input type="number" id="inp_quantidadeAmigos" placeholder="5">
+    <br>
+    <p>Insira o valor da pizza</p>
+    <input type="number" id="inp_valorPizza" placeholder="10.00">
+    <button onclick="verificar()">#lovePizza</button>
+</body>
+<script>
+    function verificar(){
+        amigos = Number(inp_quantidadeAmigos.value);
+        valorPizza = Number(inp_valorPizza.value)
+        valorDividido = valorPizza / amigos;
+
+        alert(`Cada um dos ${amigos} amigos vai pagar R$ ${valorDividido}`)
+    }
+</script>
+</html>
