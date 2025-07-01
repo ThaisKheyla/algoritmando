@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 07</title>
+</head>
+<body>
+    <!--
+    07. Crie um programa o qual:
+
+    a) Solicite a idade do usuário
+    b) Deve haver 2 botões abaixo: "Aposentadoria Homem" e "Aposentadoria Mulher"
+    c) No primeiro botão, calcule e exiba um alert com o tempo que falta para se aposentar 
+     caso seja homem, considerando que um homem se aposenta com 70 anos
+    d) No segundo botão, calcule e exiba um alert com o tempo que falta para se aposentar 
+     caso seja mulher, considerando que uma mulher se aposenta com 60 anos
+
+    Todo mundo adora pizza! Existem para todos os gostos! 
+
+    -->
+    <p>Insira a sua idade: </p>
+    <input type="text" id="inp_idade">
+    <br>
+    <button onclick="aposentadoriaHomem()">Aposentadoria homem</button>
+    <button onclick="aposentadoriaMulher()">Aposentadoria mulher</button>
+</body>
+<script>
+    var idade
+    function aposentadoriaHomem(){
+        idade = Number(inp_idade.value);
+        idadeIdeal = 70 - idade;
+        alert(`Faltam ${idadeIdeal} anos para a sua aposentadria`)
+    }
+
+    function aposentadoriaMulher(){
+        idade = Number(inp_idade.value);
+        idadeIdeal = 60 - idade;
+        alert(`Faltam ${idadeIdeal} anos Para a sua aposentadoria`)
+    }
+</script>
+</html>
