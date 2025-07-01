@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 05</title>
+</head>
+<body>
+    <!--
+    05. Crie uma página que solicite ao usuário que digite o nome do time que torce e quantos títulos o clube dele possui.
+
+    a) Deve haver um botão com o texto "Amo meu time".
+    b) Ao clicar no botão, deve aparecer uma frase como está numa caixinha de alerta:
+    "O time X tem Y títulos" - Onde X e Y são os valores que o usuário digitou, claro
+    -->
+    <p>Insira o nome do seu time: </p>
+    <input type="text" id="inp_time">
+    <br>
+    <p>Insira a quantidade de títulos o clube tem: </p>
+    <input type="number" id="inp_titulos">
+    <br>
+    <button onclick="resultado()">Amo meu time</button>
+</body>
+    <script>
+        function resultado(){
+        time = inp_time.value;
+        qtdTitulos = Number(inp_titulos.value);
+        alert(`O time ${time} tem ${qtdTitulos} títulos`)
+        }
+    </script>
+</html>
